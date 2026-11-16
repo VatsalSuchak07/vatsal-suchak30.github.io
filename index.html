@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vatsal Suchak | Embedded Engineer</title>
+<meta name="description" content="Vatsal Suchak, Embedded Linux engineer: Yocto, Secure Boot, OTA, SBOM, NXP i.MX93/i.MX95, LS1046A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<nav class="nav" id="nav">
+  <a href="#home" class="logo">VS<span>.</span></a>
+  <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  <ul id="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button id="theme" aria-label="Toggle theme">&#9680;</button></li>
+  </ul>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <p class="hello reveal">Hello, I'm</p>
+    <h1 class="reveal glitch" data-text="Vatsal Suchak">Vatsal Suchak</h1>
+    <h2 class="reveal"><span id="typed"></span><span class="cursor">|</span></h2>
+    <p class="lead reveal">I build secure, reliable embedded Linux systems: Secure Boot, OTA updates, BSP bring-up and software supply chain security on NXP platforms.</p>
+    <div class="cta reveal">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn ghost">Get in touch</a>
+    </div>
+    <div class="stats reveal">
+      <div><b data-count="2">0</b><span>NXP platforms secured<br>(i.MX93, i.MX95)</span></div>
+      <div><b data-count="15">0</b><span>OTA test scenarios</span></div>
+      <div><b data-count="9" data-suffix=" Gbps">0</b><span>VPN router throughput</span></div>
+      <div><b data-count="5">0</b><span>Projects delivered</span></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll" aria-label="Scroll down"><i></i></a>
+</header>
+
+<main>
+<section id="about">
+  <h2 class="title reveal">About <span>me</span></h2>
+  <div class="about-grid">
+    <div class="reveal">
+      <p>I'm an Associate Engineer at eInfochips working on Embedded Linux, Yocto, Secure Boot, OTA validation and SBOM/CVE analysis on NXP i.MX93, i.MX95 and LS1046A platforms.</p>
+      <p>I enjoy the layer between hardware and software: bringing boards up, debugging kernel and driver issues, and making devices trustworthy enough to ship. I'm especially interested in BSP development, Linux internals and embedded device security.</p>
+      <p class="mono">&gt; Ahmedabad, Gujarat, India</p>
+    </div>
+    <div class="terminal reveal">
+      <div class="bar"><i></i><i></i><i></i><span>vatsal@embedded: ~</span></div>
+      <pre><code><b>$</b> whoami
+vatsal-suchak
+<b>$</b> cat focus.txt
+- Embedded Linux / Yocto
+- Secure Boot &amp; OTA
+- SBOM, CVE &amp; KEV analysis
+- NXP i.MX93 / i.MX95 / LS1046A
+<b>$</b> ./build --secure --reproducible
+<em>[ OK ] image signed and verified</em></code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="title reveal">Experience</h2>
+  <div class="timeline">
+    <article class="t-item reveal">
+      <div class="dot"></div>
+      <div class="t-card tilt">
+        <h3>Associate Engineer <small>eInfochips</small></h3>
+        <p class="date">06/2026 - Present</p>
+        <ul>
+          <li>Enabled and validated Secure Boot on NXP i.MX93 and i.MX95 platforms, including image signing and boot verification.</li>
+          <li>Validated OTA update workflows on Embedded Linux. Designed and ran 15 test scenarios for reliability and rollback, and root-caused update failures.</li>
+          <li>Generated SBOMs and analysed open-source components against CVE and KEV data for compliance reporting.</li>
+          <li>Integrated and debugged connectivity stacks (MQTT, Modbus, TCP/IP, Wi-Fi, BLE) on embedded targets.</li>
+          <li>Debugged Linux kernel and driver issues during platform bring-up.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="t-item reveal">
+      <div class="dot"></div>
+      <div class="t-card tilt">
+        <h3>Engineering Intern <small>eInfochips</small></h3>
+        <p class="date">07/2025 - 05/2026</p>
+        <ul>
+          <li>Built Yocto-based Embedded Linux images and developed C programs for I2C, SPI and UART peripherals.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="title reveal">Projects</h2>
+  <div class="filters reveal">
+    <button class="active" data-f="all">All</button>
+    <button data-f="linux">Linux &amp; Security</button>
+    <button data-f="iot">IoT</button>
+    <button data-f="ai">AI / Vision</button>
+  </div>
+  <div class="cards">
+    <article class="card tilt reveal" data-cat="linux">
+      <span class="badge">Featured</span>
+      <h3>VyOS Port to ARM64 Network Router</h3>
+      <p class="sub">NXP LS1046A</p>
+      <ul>
+        <li>Ported and customized VyOS 1.5 for the LS1046A platform, covering the kernel, device tree, bootloader and root filesystem.</li>
+        <li>Enabled the hardware data path (FMan/DPAA offload) and IPsec/WireGuard VPN tunnels, reaching 9 Gbps throughput.</li>
+        <li>Automated reproducible ISO and boot image builds, and verified them on target hardware and under QEMU.</li>
+        <li>Added a secure boot chain with signed images and SRK key fusing, and documented the release for handover.</li>
+      </ul>
+      <div class="tags"><span>VyOS</span><span>ARM64</span><span>DPAA</span><span>IPsec</span><span>WireGuard</span><span>Secure Boot</span></div>
+    </article>
+
+    <article class="card tilt reveal" data-cat="linux">
+      <span class="badge">Security</span>
+      <h3>AOSP SBOM Generation and CVE/KEV Analysis</h3>
+      <p class="sub">Android supply chain security</p>
+      <ul>
+        <li>Built a pipeline that generates an SBOM from the AOSP build, listing the components and their versions.</li>
+        <li>Matched components against NVD CVEs and prioritised those in CISA's KEV catalog.</li>
+        <li>Automated the flow from build output to the final vulnerability report, making security audits repeatable.</li>
+      </ul>
+      <div class="tags"><span>AOSP</span><span>SBOM</span><span>CVE</span><span>KEV</span></div>
+    </article>
+
+    <article class="card tilt reveal" data-cat="ai">
+      <h3>Smart Traffic Management System</h3>
+      <p class="sub">YOLOv5, Python, Tkinter</p>
+      <ul>
+        <li>Detected vehicles in real time with YOLOv5 and adjusted signal timing based on traffic density per lane.</li>
+        <li>Built a Tkinter GUI to monitor signal status, vehicle counts and settings.</li>
+      </ul>
+      <div class="tags"><span>YOLOv5</span><span>OpenCV</span><span>Python</span></div>
+    </article>
+
+    <article class="card tilt reveal" data-cat="iot">
+      <h3>Cattle Health Monitoring Belt</h3>
+      <p class="sub">Raspberry Pi 4, MAX30100/30102, NEO-6M</p>
+      <ul>
+        <li>Developed a wearable that measures SpO2 and pulse rate and tracks location by GPS.</li>
+        <li>Built a web portal to monitor the health and location of multiple cattle in the same area.</li>
+      </ul>
+      <div class="tags"><span>Raspberry Pi</span><span>GPS</span><span>Sensors</span></div>
+    </article>
+
+    <article class="card tilt reveal" data-cat="iot">
+      <h3>Smart Parking Management System</h3>
+      <p class="sub">Raspberry Pi 4, IR sensors, servo, OLED</p>
+      <ul>
+        <li>Detected slot occupancy with IR sensors and automated entry and exit gates with servo motors.</li>
+        <li>Showed live availability on an OLED display and a web interface.</li>
+      </ul>
+      <div class="tags"><span>Raspberry Pi</span><span>IR</span><span>Servo</span><span>OLED</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="title reveal">Skills</h2>
+  <div class="skills">
+    <div class="skill reveal"><h3>Languages</h3><div class="tags"><span>C</span><span>C++</span><span>Python</span><span>Bash</span></div></div>
+    <div class="skill reveal"><h3>Embedded Linux</h3><div class="tags"><span>Yocto</span><span>BSP basics</span><span>Kernel fundamentals</span><span>OTA</span><span>GDB</span><span>Git</span></div></div>
+    <div class="skill reveal"><h3>Security</h3><div class="tags"><span>Secure Boot</span><span>SBOM</span><span>CVE / KEV</span><span>TLS / certificates</span></div></div>
+    <div class="skill reveal"><h3>Protocols &amp; Interfaces</h3><div class="tags"><span>MQTT</span><span>Modbus</span><span>TCP/IP</span><span>Wi-Fi</span><span>BLE</span><span>I2C</span><span>SPI</span><span>UART</span><span>GPIO</span></div></div>
+    <div class="skill reveal"><h3>Platforms</h3><div class="tags"><span>i.MX93</span><span>i.MX95</span><span>LS1046A</span><span>Raspberry Pi</span><span>Jetson Nano</span><span>ESP32</span><span>NodeMCU</span><span>Arduino UNO</span></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="title reveal">Education &amp; Certifications</h2>
+  <div class="edu">
+    <div class="card reveal"><h3>B.Tech, Computer Science &amp; Engineering</h3><p class="sub">CHARUSAT | 2023 - 2026</p><p>CGPA: <b>8.16</b></p></div>
+    <div class="card reveal"><h3>Diploma, Computer Engineering</h3><p class="sub">GMB Polytechnic, Rajula | 2020 - 2023</p><p>CPI: <b>8.46</b></p></div>
+    <div class="card reveal"><h3>Certifications</h3>
+      <ul>
+        <li>NPTEL - Database Management Systems</li>
+        <li>Fundamentals of Red Hat Enterprise Linux 9</li>
+        <li>NVIDIA - Getting Started with AI on Jetson Nano</li>
+      </ul>
+    </div>
+    <div class="card reveal"><h3>Achievements</h3>
+      <ul>
+        <li>1st Rank in GTU in multiple semesters; 3rd Rank overall in Diploma.</li>
+        <li>Participated in Smart India Hackathon and MakersFest.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title reveal">Let's <span>connect</span></h2>
+  <div class="contact reveal">
+    <p>Open to embedded Linux, BSP and device security opportunities.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:vatsalsuchak07@gmail.com">vatsalsuchak07@gmail.com</a>
+      <a class="btn ghost" href="https://linkedin.com/in/vatsal-suchak30" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>&copy; 2026 Vatsal Suchak. Built with plain HTML, CSS and JavaScript.</footer>
+<button id="top" aria-label="Back to top">&uarr;</button>
+<script src="script.js"></script>
+</body>
+</html>
